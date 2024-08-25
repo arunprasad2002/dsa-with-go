@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"example.com/dsa/search"
+)
 
 func main() {
-	fmt.Println("Hello DSA With Go")
+	numbers := []int{1, 23, 44, 5, 56, 6, 6}
+	target := 1
+	ans := search.BinarySearch(numbers, target)
+	fmt.Println(ans)
 }
