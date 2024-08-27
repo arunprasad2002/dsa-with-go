@@ -3,12 +3,12 @@ package main
 import (
 	"fmt"
 
-	"example.com/dsa/search"
+	"example.com/dsa/array"
 )
 
 func main() {
-	numbers := []int{1, 23, 44, 5, 56, 6, 6}
-	target := 1
-	ans := search.BinarySearch(numbers, target)
-	fmt.Println(ans)
+	first := []int{1, 23, 44, 5, 56, 6, 6}
+	second := []int{10, 20, 33, 4}
+	result := array.Merge(first, second)
+	fmt.Println(result)
 }
