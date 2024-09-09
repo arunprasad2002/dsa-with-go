@@ -18,3 +18,22 @@ func PrintTriangleReverse(number int) {
 		fmt.Println(strings.Repeat("*", i))
 	}
 }
+
+func PrintRightAlignTriangle(number int) {
+	for i := 1; i <= number; i++ {
+		star := i
+		spaces := number - star
+
+		// Print spaces
+		for j := 1; j <= spaces; j++ {
+			fmt.Print(" ")
+		}
+
+		// Print stars
+		for k := 1; k <= star; k++ {
+			fmt.Print("*")
+		}
+
+		fmt.Println("")
+	}
+}
