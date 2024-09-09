@@ -1,14 +1,7 @@
 package main
 
-import (
-	"fmt"
-
-	"example.com/dsa/array"
-)
+import "example.com/dsa/patterns"
 
 func main() {
-	// first := []int{1, 23, 44, 5, 56, 6, 6}
-	second := []int{10, 20, 33, 4}
-	result := array.GetConcatenation(second)
-	fmt.Println(result)
+	patterns.PrintTriangle(10)
 }
