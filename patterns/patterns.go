@@ -10,3 +10,12 @@ func PrintTriangle(number int) {
 		fmt.Println("")
 	}
 }
+
+func PrintTriangleReverse(number int) {
+	for i := number; i >= 0; i-- {
+		for j := 0; j <= i; j++ {
+			fmt.Print("*")
+		}
+		fmt.Println("")
+	}
+}
