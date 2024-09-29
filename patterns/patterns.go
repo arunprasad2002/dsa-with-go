@@ -78,3 +78,31 @@ func Pattern5(number int) {
 	}
 
 }
+
+func Pattern6(number int) {
+	stars := number/2 + 1
+	spaces := 1
+	for i := 1; i <= number; i++ {
+		for j := 1; j <= stars; j++ {
+			fmt.Print("*")
+		}
+		for k := 1; k <= spaces; k++ {
+			fmt.Print(" ")
+		}
+
+		for l := 1; l <= stars; l++ {
+			fmt.Print("*")
+		}
+
+		fmt.Println("")
+
+		if i > number/2 {
+			stars++
+			spaces -= 2
+		} else {
+			stars--
+			spaces += 2
+		}
+
+	}
+}
