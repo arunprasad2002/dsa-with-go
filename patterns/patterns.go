@@ -53,3 +53,28 @@ func Pattern4(number int) {
 		fmt.Println("")
 	}
 }
+
+func Pattern5(number int) {
+	spaces := number / 2
+	stars := 1
+
+	for i := 1; i <= number; i++ {
+
+		for j := 1; j <= spaces; j++ {
+			fmt.Print(" ")
+		}
+		for k := 1; k <= stars; k++ {
+			fmt.Print("*")
+		}
+		fmt.Println("")
+
+		if i <= number/2 {
+			spaces--
+			stars += 2
+		} else {
+			spaces++
+			stars -= 2
+		}
+	}
+
+}
