@@ -3,5 +3,5 @@ package main
 import "example.com/dsa/patterns"
 
 func main() {
-	patterns.Pattern9(5)
+	patterns.Pattern10(5)
 }

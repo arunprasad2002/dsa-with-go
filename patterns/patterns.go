@@ -145,3 +145,36 @@ func Pattern9(number int) {
 		fmt.Println("")
 	}
 }
+
+func Pattern10(number int) {
+	outerSpaces := number / 2
+	innerSpaces := -1
+	for i := 1; i <= number; i++ {
+		// Printing outer spaces
+		for j := 1; j <= outerSpaces; j++ {
+			fmt.Print(" ")
+		}
+		// Printing the first '*'
+		fmt.Print("*")
+
+		// Printing inner spaces (if any)
+		if innerSpaces > 0 {
+			for k := 1; k <= innerSpaces; k++ {
+				fmt.Print(" ")
+			}
+			// Printing the second '*' if it's not the top/bottom point
+			fmt.Print("*")
+		}
+
+		fmt.Println("")
+
+		// Adjust outer and inner spaces based on whether you are in the top or bottom half
+		if i <= number/2 {
+			outerSpaces--
+			innerSpaces += 2
+		} else {
+			outerSpaces++
+			innerSpaces -= 2
+		}
+	}
+}
