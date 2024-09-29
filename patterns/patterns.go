@@ -6,20 +6,20 @@ import (
 )
 
 // PrintTriangle prints a right-angled triangle of '*' characters.
-func PrintTriangle(number int) {
+func Pattern1(number int) {
 	for i := 1; i <= number; i++ {
 		fmt.Println(strings.Repeat("*", i))
 	}
 }
 
 // PrintTriangleReverse prints an inverted right-angled triangle of '*' characters.
-func PrintTriangleReverse(number int) {
+func Pattern2(number int) {
 	for i := number; i >= 1; i-- {
 		fmt.Println(strings.Repeat("*", i))
 	}
 }
 
-func PrintRightAlignTriangle(number int) {
+func Pattern3(number int) {
 	for i := 1; i <= number; i++ {
 		star := i
 		spaces := number - star
