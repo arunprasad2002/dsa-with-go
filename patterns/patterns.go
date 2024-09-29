@@ -132,3 +132,16 @@ func Pattern8(number int) {
 		fmt.Println("")
 	}
 }
+
+func Pattern9(number int) {
+	for i := 1; i <= number; i++ {
+		for j := 1; j <= number; j++ {
+			if i == j || i+j == number+1 {
+				fmt.Print("*")
+			} else {
+				fmt.Print(" ")
+			}
+		}
+		fmt.Println("")
+	}
+}
