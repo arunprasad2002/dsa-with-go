@@ -106,3 +106,16 @@ func Pattern6(number int) {
 
 	}
 }
+
+func Pattern7(number int) {
+	for i := 1; i <= number; i++ {
+		for j := 1; j <= number; j++ {
+			if i == j {
+				fmt.Print("*")
+			} else {
+				fmt.Print(" ")
+			}
+		}
+		fmt.Println("")
+	}
+}
