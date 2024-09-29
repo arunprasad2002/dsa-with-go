@@ -37,3 +37,19 @@ func PrintRightAlignTriangle(number int) {
 		fmt.Println("")
 	}
 }
+
+func Pattern4(number int) {
+	for i := number; i >= 1; i-- {
+		spaces := number - i
+		stars := i
+
+		for space := 1; space <= spaces; space++ {
+			fmt.Print(" ")
+		}
+		for star := 1; star <= stars; star++ {
+			fmt.Print("*")
+		}
+
+		fmt.Println("")
+	}
+}
