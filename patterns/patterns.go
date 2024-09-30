@@ -183,7 +183,7 @@ func Pattern11(number int) {
 	counter := 1
 	for i := 1; i <= number; i++ {
 		for j := 1; j <= i; j++ {
-			fmt.Print(counter)
+			fmt.Print(counter, "\t")
 			counter++
 		}
 		fmt.Println()
