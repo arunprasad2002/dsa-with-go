@@ -189,3 +189,18 @@ func Pattern11(number int) {
 		fmt.Println()
 	}
 }
+
+func Pattern12(number int) {
+	a := 0
+	b := 1
+	for i := 1; i <= number; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print(a, "\t")
+			c := a + b
+			a = b
+			b = c
+		}
+		fmt.Println("")
+
+	}
+}
