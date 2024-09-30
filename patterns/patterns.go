@@ -204,3 +204,15 @@ func Pattern12(number int) {
 
 	}
 }
+
+func Pattern13(number int) {
+	for i := 0; i < number; i++ {
+		icj := 1
+		for j := 0; j <= i; j++ {
+			fmt.Print(icj, "\t")
+			icj1 := icj * (i - j) / (j + 1)
+			icj = icj1
+		}
+		fmt.Println("")
+	}
+}
