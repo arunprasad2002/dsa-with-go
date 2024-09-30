@@ -222,3 +222,34 @@ func Pattern14(number int) {
 		fmt.Printf("%d X %d  = %d \n", number, i, number*i)
 	}
 }
+
+func Pattern15(number int) {
+	stars := 1
+	spaces := number / 2
+	answer := 1
+	for i := 1; i <= number; i++ {
+		for j := 1; j <= spaces; j++ {
+			fmt.Print(" ")
+		}
+		innerAnswer := answer
+		for k := 1; k <= stars; k++ {
+			fmt.Print(innerAnswer)
+			if k <= stars/2 {
+				innerAnswer++
+			} else {
+				innerAnswer--
+			}
+		}
+
+		fmt.Println()
+		if i < number/2+1 {
+			stars += 2
+			spaces -= 1
+			answer++
+		} else {
+			stars -= 2
+			spaces += 1
+			answer--
+		}
+	}
+}
