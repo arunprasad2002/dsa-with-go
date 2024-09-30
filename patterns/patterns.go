@@ -219,6 +219,6 @@ func Pattern13(number int) {
 
 func Pattern14(number int) {
 	for i := 1; i <= 10; i++ {
-		fmt.Printf("%s X %d  = %dx \n", "x", i, i)
+		fmt.Printf("%d X %d  = %d \n", number, i, number*i)
 	}
 }
