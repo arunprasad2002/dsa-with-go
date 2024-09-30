@@ -178,3 +178,14 @@ func Pattern10(number int) {
 		}
 	}
 }
+
+func Pattern11(number int) {
+	counter := 1
+	for i := 1; i <= number; i++ {
+		for j := 1; j <= i; j++ {
+			fmt.Print(counter)
+			counter++
+		}
+		fmt.Println()
+	}
+}
