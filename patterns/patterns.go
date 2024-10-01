@@ -282,3 +282,33 @@ func Pattern16(number int) {
 		fmt.Println()
 	}
 }
+
+func Pattern17(number int) {
+	stars := 1
+	spaces := number / 2
+
+	for i := 1; i <= number; i++ {
+
+		for k := 1; k <= spaces; k++ {
+			if i == number/2+1 {
+				fmt.Print("*\t")
+			} else {
+				fmt.Print("\t")
+			}
+
+		}
+
+		for j := 1; j <= stars; j++ {
+			fmt.Print("*\t")
+		}
+
+		if i <= number/2 {
+			stars++
+		} else {
+			stars--
+		}
+
+		fmt.Println()
+
+	}
+}
