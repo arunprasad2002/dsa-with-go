@@ -253,3 +253,32 @@ func Pattern15(number int) {
 		}
 	}
 }
+
+func Pattern16(number int) {
+	spaces := 2*number - 3
+	stars := 1
+
+	for i := 1; i <= number; i++ {
+		answer := 1
+		for j := 1; j <= stars; j++ {
+			fmt.Print(answer)
+			answer++
+		}
+		for k := 1; k <= spaces; k++ {
+			fmt.Print(" ")
+		}
+
+		if i == number {
+			stars--
+			answer--
+		}
+
+		for l := 1; l <= stars; l++ {
+			answer--
+			fmt.Print(answer)
+		}
+		stars++
+		spaces -= 2
+		fmt.Println()
+	}
+}
