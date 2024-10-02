@@ -345,7 +345,6 @@ func Pattern18(number int) {
 func Pattern19(number int) {
 	for i := 1; i <= number; i++ {
 		for star := 1; star <= number; star++ {
-
 			if star > number/2+1 && star < number && i <= number/2 || i > 1 && i <= number/2 && star < number/2+1 || i > number/2+1 && star > 1 && star <= number/2 || i > number/2+1 && star > number/2+1 && i < number {
 				fmt.Print("\t")
 			} else {
@@ -355,4 +354,21 @@ func Pattern19(number int) {
 		}
 		fmt.Println()
 	}
+}
+
+func Pattern20(number int) {
+
+	for i := 0; i <= number; i++ {
+		for star := 1; star <= number; star++ {
+			if star == 1 || star == number || i == star && i > number/2 || i+star == number+1 && i > number/2 {
+				fmt.Print("*\t")
+			} else {
+				fmt.Print("\t")
+			}
+
+		}
+
+		fmt.Println()
+	}
+
 }
