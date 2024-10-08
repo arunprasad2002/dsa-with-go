@@ -1,7 +1,12 @@
 package main
 
-import "example.com/dsa/patterns"
+import (
+	"fmt"
+
+	"example.com/dsa/array"
+)
 
 func main() {
-	patterns.Pattern20(5)
+	ans := array.DigitFrequency(567567676, 6)
+	fmt.Println(ans)
 }
