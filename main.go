@@ -7,6 +7,6 @@ import (
 )
 
 func main() {
-	ans := array.DigitFrequency(567567676, 6)
+	ans := array.Anybase(634, 8)
 	fmt.Println(ans)
 }
