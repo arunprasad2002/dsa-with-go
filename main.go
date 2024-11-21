@@ -1,12 +1,13 @@
 package main
 
-import (
-	"fmt"
-
-	"example.com/dsa/array"
-)
+import "example.com/dsa/linkedlist"
 
 func main() {
-	ans := array.Anybase(634, 8)
-	fmt.Println(ans)
+	ll := &linkedlist.Linkedlist{}
+
+	ll.Add(10)
+	ll.Add(20)
+	ll.Add(40)
+
+	ll.Display()
 }
