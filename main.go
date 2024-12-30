@@ -1,13 +1,17 @@
 package main
 
-import "example.com/dsa/linkedlist"
+import (
+	"example.com/dsa/linkedlist"
+)
 
 func main() {
-	ll := &linkedlist.Linkedlist{}
+	list := linkedlist.Linkedlist{}
+	list.Add(10)
+	list.Add(10)
+	list.Add(20)
+	list.Add(30)
+	newHead := linkedlist.DeleteDuplicates(list.Head)
 
-	ll.Add(10)
-	ll.Add(20)
-	ll.Add(40)
+	linkedlist.PrintList(newHead)
 
-	ll.Display()
 }

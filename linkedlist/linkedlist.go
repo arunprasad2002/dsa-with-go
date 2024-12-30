@@ -11,18 +11,18 @@ type Node struct {
 // linkedlist represet the linked list
 
 type Linkedlist struct {
-	head *Node
+	Head *Node
 }
 
 // Add appends a new node with the given data to the linked list
 func (ll *Linkedlist) Add(data int) {
 	newNode := &Node{data: data}
-	if ll.head == nil {
-		ll.head = newNode
+	if ll.Head == nil {
+		ll.Head = newNode
 		return
 	}
 
-	current := ll.head
+	current := ll.Head
 
 	for current.next != nil {
 		current = current.next
@@ -34,16 +34,16 @@ func (ll *Linkedlist) Add(data int) {
 // Delete removes the first occurenece of a node with specific value
 
 func (ll *Linkedlist) Delete(data int) {
-	if ll.head == nil {
+	if ll.Head == nil {
 		fmt.Println("List is empty")
 		return
 	}
-	if ll.head.data == data {
-		ll.head = ll.head.next
+	if ll.Head.data == data {
+		ll.Head = ll.Head.next
 		return
 	}
 
-	current := ll.head
+	current := ll.Head
 
 	for current.next != nil && current.next.data != data {
 		current = current.next
@@ -60,11 +60,11 @@ func (ll *Linkedlist) Delete(data int) {
 // Display prints all the elements in the linked list
 
 func (ll *Linkedlist) Display() {
-	if ll.head == nil {
+	if ll.Head == nil {
 		fmt.Println("List is empty")
 		return
 	}
-	current := ll.head
+	current := ll.Head
 
 	for current != nil {
 		fmt.Printf("%d -> ", current.data)
