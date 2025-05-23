@@ -2,74 +2,58 @@ package linkedlist
 
 import "fmt"
 
-// Node represents a single node in the linked list
 type Node struct {
 	data int
 	next *Node
 }
 
-// linkedlist represet the linked list
-
-type Linkedlist struct {
-	Head *Node
+type LinkedList struct {
+	head *Node
 }
 
-// Add appends a new node with the given data to the linked list
-func (ll *Linkedlist) Add(data int) {
-	newNode := &Node{data: data}
-	if ll.Head == nil {
-		ll.Head = newNode
+func (ll *LinkedList) Add(data int) {
+	newNode := &Node{
+		data: data,
+	}
+	if ll.head == nil {
+		ll.head = newNode
 		return
 	}
-
-	current := ll.Head
-
-	for current.next != nil {
-		current = current.next
+	currentNode := ll.head
+	for currentNode.next != nil {
+		currentNode = currentNode.next
 	}
-
-	current.next = newNode
+	currentNode.next = newNode
 }
 
-// Delete removes the first occurenece of a node with specific value
+func (ll *LinkedList) Display() {
+	currentNode := ll.head
 
-func (ll *Linkedlist) Delete(data int) {
-	if ll.Head == nil {
-		fmt.Println("List is empty")
-		return
-	}
-	if ll.Head.data == data {
-		ll.Head = ll.Head.next
-		return
+	for currentNode != nil {
+		fmt.Println(currentNode.data)
+		currentNode = currentNode.next
 	}
 
-	current := ll.Head
-
-	for current.next != nil && current.next.data != data {
-		current = current.next
-	}
-
-	if current.next == nil {
-		fmt.Println("Value not found in the list")
-		return
-	}
-
-	current.next = current.next.next
 }
 
-// Display prints all the elements in the linked list
+func (ll *LinkedList) Remove(data int) {
+	if ll.head == nil {
+		return // List is empty
+	}
 
-func (ll *Linkedlist) Display() {
-	if ll.Head == nil {
-		fmt.Println("List is empty")
+	// Special case: the head needs to be removed
+	if ll.head.data == data {
+		ll.head = ll.head.next
 		return
 	}
-	current := ll.Head
 
-	for current != nil {
-		fmt.Printf("%d -> ", current.data)
-		current = current.next
+	currentNode := ll.head
+
+	for currentNode.next != nil {
+		if currentNode.next.data == data {
+			currentNode.next = currentNode.next.next
+			return
+		}
+		currentNode = currentNode.next
 	}
-	fmt.Println("nil")
-
 }
